@@ -1,5 +1,6 @@
 package com.emerson;
 
+import io.micrometer.core.annotation.Counted;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -11,6 +12,7 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class PessoaResource {
 
+    @Counted(value = "counted.getPessoa", description = "Quantidade de vezes que o endpoint getPessoa foi chamado")
     @GET
     public List<Pessoa> getPessoa() {
         return Pessoa.listAll();

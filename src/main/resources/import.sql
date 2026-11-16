@@ -5,4 +5,4 @@ INSERT INTO Pessoa (id, nome, anonascimento) VALUES (4, 'Otavio', 2000);
 INSERT INTO Pessoa (id, nome, anonascimento) VALUES (5, 'Elias', 1988);
 INSERT INTO Pessoa (id, nome, anonascimento) VALUES (6, 'Rodrigo', 2000);
 
-ALTER SEQUENCE Pessoa_id_seq RESTART WITH 7;
+ALTER SEQUENCE pessoa_seq RESTART WITH 7;
